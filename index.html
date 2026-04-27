@@ -63,12 +63,28 @@
     transition: background 0.3s;
   }
   .nav-logo {
-    font-family: var(--syne); font-weight: 800; font-size: 1.15rem;
-    letter-spacing: -0.02em; color: var(--text);
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none;
   }
-  .nav-logo .dot {
-    color: var(--accent); display: inline-block;
-    animation: pulse 2s ease-in-out infinite;
+  .nav-logo-badge {
+    width: 38px; height: 38px; border-radius: 10px;
+    background: linear-gradient(135deg, #4f8ef7 0%, #c084fc 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--syne); font-weight: 800; font-size: 0.95rem;
+    color: #fff; letter-spacing: -0.02em;
+    box-shadow: 0 0 16px rgba(79,142,247,0.45);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .nav-logo:hover .nav-logo-badge {
+    box-shadow: 0 0 28px rgba(192,132,252,0.6);
+    transform: scale(1.08) rotate(-3deg);
+  }
+  .nav-logo-text {
+    font-family: var(--syne); font-weight: 700; font-size: 1rem;
+    letter-spacing: -0.01em;
+    background: linear-gradient(135deg, #4f8ef7, #c084fc);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a {
@@ -451,7 +467,10 @@
 
 <!-- NAV -->
 <nav id="main-nav">
-  <div class="nav-logo">SA<span class="dot"> </span></div>
+  <a class="nav-logo" href="#home">
+    <div class="nav-logo-badge">SA</div>
+    <span class="nav-logo-text">Saurabh Anand</span>
+  </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -470,7 +489,7 @@
       Open to Full-time Opportunities
     </div>
     <h1>
-      Hi, I'm Saurabh <br>
+      Hi, I'm Saurabh.<br>
       <span class="gradient-text" id="typed-role">Software Engineer</span>
     </h1>
     <p class="hero-sub">
@@ -653,7 +672,7 @@
       <div class="proj-card reveal reveal-delay-1">
         <div class="proj-header">
           <div class="proj-icon">🚀</div>
-          <div class="proj-period">Jan – Mar 2025</div>
+          <div class="proj-period">Jan – Feb 2025</div>
         </div>
         <div class="proj-title">NASA Space Explorer</div>
         <div class="proj-desc">A dynamic full-stack web app using NASA's Open APIs for real-time space data visualisation. Features interactive D3.js graphs for Near-Earth Objects and an AI-powered chatbot for space exploration.</div>
@@ -791,7 +810,6 @@
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.26 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.17 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/>
           </svg>
           +91 8587897142
-         +353 877084714
         </a>
       </div>
     </div>
